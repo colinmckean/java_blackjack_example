@@ -1,11 +1,13 @@
 package blackjack;
 
 public class Card {
-  int value;
-  public Card(){
-    value = 10;
+  private CardValue cardValue;
+  
+  public Card(CardValue cardValue){
+    this.cardValue = cardValue;
   }
-  public int getHandStrength(){
-    return value;
+
+  public CardValue getCardValue(){
+    return cardValue;
   }
 }
