@@ -8,17 +8,20 @@ public class CardTest {
 
   @Before
   public void before(){
-    value = CardValue.values()[10];
+    value = CardValue.values()[0];
     card = new Card(value);
   }
 
   @Test
   public void testCardHasValue(){
-    assertEquals(10, card.getCardValue().ordinal());
+    // + 2;
+    assertEquals(0, card.getCardValue().ordinal());
   }
 
   @Test
   public void testCardHasName(){
-    assertEquals("QUEEN", card.getCardValue().toString());
+    assertEquals("TWO", card.getCardValue().toString());
   }
+
+
 }
