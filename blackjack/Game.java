@@ -9,5 +9,12 @@ public class Game {
     //dealer, deck of cards.
     players = new ArrayList<Player>();
   }
+  
+  public void addPlayer(Player player){
+    players.add(player);
+  }
 
+  public int getNumberOfPlayers(){
+    return players.size();
+  }
 }
