@@ -12,6 +12,7 @@ public class Player {
     hand.add(card);
     this.name = name;
     cardsInHand += card.getCardValue().toString();
+    cardsInHand += " OF " + card.getSuit().toString();
   }
 
   public String getName(){
