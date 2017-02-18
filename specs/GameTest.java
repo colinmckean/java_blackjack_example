@@ -47,7 +47,7 @@ public class GameTest {
     game.addPlayer(player_2);
     player_1.calculateHandValue();
     player_2.calculateHandValue();
-    assertEquals("Big Boss won with JACK of HEARTS", game.compaareHands());
+    assertEquals("Big Boss won with JACK OF SPADES", game.compaareHands());
   }
 
 }
