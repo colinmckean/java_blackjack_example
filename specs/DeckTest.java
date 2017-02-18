@@ -13,4 +13,10 @@ public class DeckTest {
   public void testDeckSize(){
     assertEquals(52, deck.getDeckSize());
   }
+
+  @Test
+  public void testDeckReducesCountOnDraw(){
+    deck.drawCard();
+    assertEquals(51, deck.getDeckSize());
+  }
 }
