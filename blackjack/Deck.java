@@ -17,9 +17,16 @@ public class Deck{
     }
     Collections.shuffle(deck);
   }
-  
+
   public int getDeckSize(){
     return deck.size();
+  }
+  public Card drawCard(){
+    Card card = deck.get(0);
+    System.out.println(card.getCardValue());
+    System.out.println(card.getSuit());
+    deck.remove(0);
+    return card;
   }
 
 }
