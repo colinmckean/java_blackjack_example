@@ -28,11 +28,20 @@ public class GameTest {
   }
 
   @Test
-  public void testCanAddPlaers(){
+  public void testCanAddPlayers(){
     game.addPlayer(player_1);
     game.addPlayer(player_2);
     game.addPlayer(player_3);
     assertEquals(3, game.getNumberOfPlayers());
+  }
+
+  @Test
+    public void testGameResult(){
+    game.addPlayer(player_1);
+    game.addPlayer(player_2);
+    player_1.calculateHandValue();
+    player_2.calculateHandValue();
+    assertEquals("Big Boss won with 3", game.compaareHands());
   }
 
 }
