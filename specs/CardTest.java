@@ -5,19 +5,25 @@ import blackjack.*;
 public class CardTest {
   Card card;
   Card card_2;
+  Card card_3;
   CardValue value;
   CardValue value_2;
+  CardValue value_3;
   Player player_1;
   Player player_2;
+  Player player_3;
 
   @Before
   public void before(){
     value = CardValue.values()[0];
     value_2 = CardValue.values()[1];
+    value_3 = CardValue.values()[3];
     card = new Card(value);
     card_2 = new Card(value_2);
+    card_3 = new Card(value_3);
     player_1 = new Player("Colin", card);
     player_2 = new Player("Big Boss", card_2);
+    player_3 = new Player("Little Boss", card_3);
   }
 
   @Test
@@ -30,12 +36,4 @@ public class CardTest {
   public void testCardHasName(){
     assertEquals("TWO", card.getCardValue().toString());
   }
-
-  @Test
-  public void testPlayerHand(){
-    assertEquals(2, player_1.getHandValue());
-    assertEquals(3, player_2.getHandValue());
-  }
-
-
 }
