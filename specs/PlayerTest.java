@@ -23,6 +23,11 @@ public class PlayerTest {
   public void testGetName(){
     assertEquals("Colin", player_1.getName());
     assertEquals("Chris", player_2.getName());
+  }
 
+  @Test 
+  public void testCalculateHandValue(){
+    player_1.calculateHandValue();
+    assertEquals(2, player_1.getHandValue());
   }
 }
