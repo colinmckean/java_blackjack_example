@@ -30,4 +30,10 @@ public class PlayerTest {
     player_1.calculateHandValue();
     assertEquals(2, player_1.getHandValue());
   }
+  
+  @Test
+  public void testRevealHand(){
+    player_1.revealHand();
+    assertEquals("TWO", player_1.revealHand());
+  }
 }
