@@ -12,18 +12,21 @@ public class CardTest {
   Player player_1;
   Player player_2;
   Player player_3;
+  Suit suit;
+  Suit suit_2;
+  Suit suit_3;
 
   @Before
   public void before(){
     value = CardValue.values()[0];
+    suit = Suit.values()[0];
     value_2 = CardValue.values()[1];
+    suit_2 = Suit.values()[1];
     value_3 = CardValue.values()[3];
-    card = new Card(value);
-    card_2 = new Card(value_2);
-    card_3 = new Card(value_3);
-    player_1 = new Player("Colin", card);
-    player_2 = new Player("Big Boss", card_2);
-    player_3 = new Player("Little Boss", card_3);
+    suit_3 = Suit.values()[2];
+    card = new Card(value, suit);
+    card_2 = new Card(value_2, suit_2);
+    card_3 = new Card(value_3, suit_3);
   }
 
   @Test
@@ -35,5 +38,11 @@ public class CardTest {
   @Test
   public void testCardHasName(){
     assertEquals("TWO", card.getCardValue().toString());
+  }
+  @Test
+  public void testGetSuit(){
+    assertEquals("HEARTS", card.getSuit().toString());
+    assertEquals("SPADES", card_2.getSuit().toString());
+    assertEquals("CLUBS", card_3.getSuit().toString());
   }
 }
