@@ -36,7 +36,7 @@ public class Game {
   }
   public void showAllHands(){
     for(Player player : players){
-      System.out.println(player.getName() + " had " + "\n" + player.revealHand());
+      System.out.println("\n" + player.getName() + " had " +  player.revealHand());
     }
   }
 
