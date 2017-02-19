@@ -6,6 +6,7 @@ public class PlayerTest {
   CardValue two;
   CardValue king;
   CardValue ace;
+  CardValue queen;
 
   Suit hearts;
   Suit spades;
@@ -28,10 +29,10 @@ public class PlayerTest {
     spades = Suit.values()[1];
 
     two = CardValue.values()[0];
+    queen = CardValue.values()[10];
     king = CardValue.values()[11];
     ace = CardValue.values()[12];
-
-    queenOfHearts = new Card(value, hearts);
+    queenOfHearts = new Card(queen, hearts);
     twoOfSpades = new Card(two, spades);
     kingOfHearts = new Card(king, hearts);
     aceOfSpades = new Card(ace, spades);
