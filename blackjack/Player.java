@@ -53,6 +53,7 @@ public class Player {
   }
 
   public void calculateBlackjackValue(){
+    blackjackValue = 0;
     for(int i = 0; i < hand.size(); i++){
       this.blackjackValue += hand.get(i).getBlackJackValue();
     }
