@@ -38,6 +38,7 @@ public class Player {
     return cardsInHand;
   }
   public void takeCard(Card card){
+    cardsInHand += card.getFriendlyName();
     hand.add(card);
     calculateHandValue();
   }
