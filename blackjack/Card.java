@@ -15,4 +15,8 @@ public class Card {
   public Suit getSuit(){
      return suit;
    }
+
+   public String getFriendlyName(){
+    return this.cardValue.toString() + " OF " + this.suit.toString();
+   }
 }
