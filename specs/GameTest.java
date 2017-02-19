@@ -12,7 +12,7 @@ public class GameTest {
   Player player_1;
   Player player_2;
   Player player_3;
-  Player dealer;
+  Dealer dealer;
   Suit suit;
   Suit suit_2;
   Suit suit_3;
@@ -57,6 +57,13 @@ public class GameTest {
   public void testCanAddDealer(){
     game.addPlayer(dealer);
     assertEquals(1, game.getNumberOfPlayers());
+  }
+
+
+  @Test
+  public void testDeckReducesCountOnDeal(){
+    dealer.deal(deck);
+    assertEquals(50, deck.getDeckSize());
   }
 
 }
