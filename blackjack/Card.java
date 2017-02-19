@@ -17,6 +17,6 @@ public class Card {
    }
 
    public String getFriendlyName(){
-    return this.cardValue.toString() + " OF " + this.suit.toString();
+    return "\n" + this.cardValue.toString() + " OF " + this.suit.toString();
    }
 }
