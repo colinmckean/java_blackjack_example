@@ -45,4 +45,7 @@ public class CardTest {
     assertEquals("SPADES", card_2.getSuit().toString());
     assertEquals("CLUBS", card_3.getSuit().toString());
   }
+  public void testGetFriendlyName(){
+    assertEquals("TWO OF HEARTS", card.getFriendlyName());
+  }
 }
