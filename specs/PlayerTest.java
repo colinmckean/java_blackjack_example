@@ -19,10 +19,14 @@ public class PlayerTest {
   @Before 
   public void before(){
     suit = Suit.values()[0];
+    suit_2 = Suit.values()[1];
+    value_2 = CardValue.values()[0];
     value = CardValue.values()[0];
     card = new Card(value, suit);
+    card_2 = new Card(value_2, suit_2);
     player_1 = new Player("Colin", card);    
     player_2 = new Player("Chris", card);
+    player_3 = new Player("John");
   }
 
   @Test
@@ -41,5 +45,19 @@ public class PlayerTest {
   public void testRevealHand(){
     player_1.revealHand();
     assertEquals("TWO OF HEARTS", player_1.revealHand());
+  }
+
+  @Test 
+  public void testCanTakeAnotherCard(){
+    player_3.calculateHandValue();
+    assertEquals(0, player_3.getHandValue());
+
+    player_3.takeCard(card_2);
+    assertEquals(2, player_3.getHandValue());
+
+    player_3.takeCard(card);
+    assertEquals(4, player_3.getHandValue());
+
+
   }
 }
