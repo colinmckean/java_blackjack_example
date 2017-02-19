@@ -6,8 +6,6 @@ public class Game {
   private Player winner;
 
   public Game(){
-    //some inputs for names
-    //dealer, deck of cards.
     players = new ArrayList<Player>();
   }
 
@@ -31,6 +29,15 @@ public class Game {
 
   public String displayResult(Player player){
     return player.getName() + " won with " + player.revealHand();
+  }
+
+  public ArrayList<Player> getPlayers(){
+    return players;
+  }
+  public void showAllHands(){
+    for(Player player : players){
+      System.out.println(player.getName() + " had " + "\n" + player.revealHand());
+    }
   }
 
   
