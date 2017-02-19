@@ -60,9 +60,17 @@ public class GameTest {
   }
 
 
+  // @Test
+  // public void testDeckReducesCountOnDeal(){
+  //   dealer.deal(deck);
+  //   assertEquals(50, deck.getDeckSize());
+  // }
   @Test
-  public void testDeckReducesCountOnDeal(){
-    dealer.deal(deck);
+  public void testPlayGame(){
+    game.addPlayer(dealer);
+    game.addPlayer(player_2);
+    dealer.deal(deck, game.getPlayers());
+    game.compaareHands();
     assertEquals(50, deck.getDeckSize());
   }
 
