@@ -12,9 +12,11 @@ public class GameTest {
   Player player_1;
   Player player_2;
   Player player_3;
+  Player dealer;
   Suit suit;
   Suit suit_2;
   Suit suit_3;
+  Deck deck;
   Game game = new Game(); 
 
   @Before
@@ -31,6 +33,8 @@ public class GameTest {
     player_1 = new Player("Colin", card);
     player_2 = new Player("Big Boss", card_2);
     player_3 = new Player("Little Boss", card_3);
+    dealer = new Dealer();
+    deck = new Deck();
   }
 
   @Test
@@ -48,6 +52,11 @@ public class GameTest {
     player_1.calculateHandValue();
     player_2.calculateHandValue();
     assertEquals("Big Boss won with JACK OF SPADES", game.compaareHands());
+  }
+  @Test 
+  public void testCanAddDealer(){
+    game.addPlayer(dealer);
+    assertEquals(1, game.getNumberOfPlayers());
   }
 
 }
