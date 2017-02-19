@@ -2,7 +2,7 @@ import blackjack.*;
 import java.util.Scanner;
 
 public class Console {
-    
+
     Scanner input;
     int numOfPlayers;
     Game game;
@@ -20,7 +20,9 @@ public class Console {
     public void playGame(){
         game.addPlayer(dealer);
         getPlayersName();
+        for(int i = 0; i < 2; i ++){
         dealer.deal(deck, game.getPlayers());
+    }
         System.out.println(game.compaareHands());
         game.showAllHands();
     }
