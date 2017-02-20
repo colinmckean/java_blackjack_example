@@ -3,10 +3,13 @@ import java.util.*;
 
 public class Game {
   private ArrayList<Player> players;
+  private ArrayList<Player> winnersCicle;
   private Player winner;
 
   public Game(){
     players = new ArrayList<Player>();
+    //thinking Ill add players to this.
+    winnersCicle = new ArrayList<Player>();
   }
 
   public void addPlayer(Player player){

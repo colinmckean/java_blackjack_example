@@ -10,4 +10,7 @@ public class Dealer extends Player{
       player.takeCard(deck.drawCard());
     }
   }
+  public void giveOneCard(Deck deck, Player player){
+    player.takeCard(deck.drawCard());
+  }
 }
