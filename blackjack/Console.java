@@ -94,12 +94,15 @@ public class Console {
    }
     public void whoWon(){        
         for(int player = 1; player < players.size(); player++){
-            if(players.get(player).getBlackjackValue() <= 21){
+            if(players.get(player).getBlackjackValue() <= 21 && players.get(player).getBlackjackValue() > players.get(0).getBlackjackValue() ){
                 winners.add(players.get(player));
-            }else if(players.get(0).checkIfBust() == false){
+            }else if(players.get(0).getBlackjackValue() <= 21 && players.get(0).checkIfBust() != true){
                 winners.add(players.get(0));
-            }else{
-                System.out.println("no winners");
+            }else if(players.get(0).checkIfBust() == true && players.get(player).getBlackjackValue() <= 21){
+                winners.add(players.get(player));
+            }
+            else{
+                System.out.println("House always wins ;)");
             }
 
         
